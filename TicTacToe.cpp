@@ -119,7 +119,7 @@ void play(char player, char board[3][3]) {
         cout << endl;
      }
     
-    checkWinner(board); 
+    //checkWinner(board); 
 
     if(player == 'X') {
         player = 'O';
