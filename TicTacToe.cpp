@@ -2,6 +2,7 @@
 #include <ctime>
 #include <stdlib.h>
 using namespace std;
+
 void checkWinner(char board[3][3]) {
 //Check For X 
     if (board[0][0] == 'X' && board[0][1] == 'X' && board[0][2] == 'X') {//Top Row 
@@ -78,7 +79,7 @@ void play(char player, char board[3][3]) {
     char move;
     cout << "Choose a Number: \t";
     cin >> move;
-
+    
     switch(move) {
         case '1':
             board[0][0] = player;
@@ -119,7 +120,7 @@ void play(char player, char board[3][3]) {
         cout << endl;
      }
     
-    //checkWinner(board); 
+    checkWinner(board); 
 
     if(player == 'X') {
         player = 'O';
@@ -130,6 +131,9 @@ void play(char player, char board[3][3]) {
     }
     
 }
+
+
+
 
 
 void display() {
